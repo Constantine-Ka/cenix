@@ -56,7 +56,7 @@ const regionlist = [
     await page.waitForSelector(".Price_price__QzA8L")
     
     let ContentInfo = await page.evaluate(() => {
-        const formater = (srcText)=>srcText.match(/\d|\s|\,|\./g).join("").trim()
+        const formater = (srcText)=>srcText.match(/\d|\s|\,|\./g).join("").trim() //Утилита для удаления лишних символов.
         let Txt =""
         let Obj = {}
         let currentprice = document.querySelector(".Price_size_XL__MHvC1")
